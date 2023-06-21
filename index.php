@@ -12,13 +12,13 @@
   <header>
     <nav class="flex1">
       <div class="logo">
-        <img src="" alt="Digital Outlooks">
+        <img src="" alt="">
       </div>
       <div class="navMenu">
         <a href="#home" class="homeNavItem navItem">Home</a>
         <a href="#about" class="aboutNavItem navItem">About</a>
         <a href="#features" class="featuresNavItem navItem">Features</a>
-        <a href="#product" class="productNavItem navItem">Product</a>
+        <a href="HomeProducts.php" class="productNavItem navItem">Product</a>
         <a href="#testimonial" class="testimonialNavItem navItem">Testimonial</a>
         <a href="#faq" class="faqNavItem navItem">FQA</a>
         <a href="#contact" class="contactNavItem navItem">Contact</a>
@@ -48,7 +48,7 @@
         <div class="left">
           <h1> Best digital watch for your daily life </h1>
           <p> Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am engrossed itatibus additions. </p>
-          <button>BUY NOW</button>
+          <button>BUY NOW</button><a href='signup/index.php'></a>
         </div>
         <div class="right  mtop">
           <div class="img_animation">

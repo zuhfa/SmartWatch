@@ -2,8 +2,8 @@
 <header class="header">
 
    <div class="flex">
-   <a href="Admin.php" ><i class="fa-solid fa-house"></i></a> 
-      <a href="#" class="logo">WRAPPEDHEARTS</a>
+   <a href="Dashboard.php" ><i class="fa-solid fa-house"></i></a> 
+      <a href="#" class="logo">Digital Outlooks</a>
 
       <nav class="navbar">
          <a href="adminproduct.php">add products</a>

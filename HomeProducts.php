@@ -5,13 +5,13 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
-   header('location:login.php');
+   header('location:Login.php');
 };
 
 if(isset($_GET['logout'])){
    unset($user_id);
    session_destroy();
-   header('location:login.php');
+   header('location:Login.php');
 };
 
 if(isset($_POST['add_to_cart'])){
@@ -427,7 +427,7 @@ body{
 <header class="header">
 
    <div class="flex">
-   <a href="Home.php" ><i class="fa-solid fa-house"></i></a> 
+   <a href="index.php" ><i class="fa-solid fa-house"></i></a> 
       <a href="#" class="logo">WRAPPEDHEARTS</a>
 
       <nav class="navbar">
@@ -464,7 +464,7 @@ if(isset($message)){
 <div class="user-profile">
 
    <?php
-      $select_user = mysqli_query($conn, "SELECT * FROM `signupdb` WHERE ID = '$user_id'") or die('query failed');
+      $select_user = mysqli_query($conn, "SELECT * FROM `signupdb` WHERE id = '$user_id'") or die('query failed');
       if(mysqli_num_rows($select_user) > 0){
          $fetch_user = mysqli_fetch_assoc($select_user);
       };
@@ -474,7 +474,7 @@ if(isset($message)){
    <p> Email : <span><?php echo $fetch_user['Email']; ?></span> </p>
    <div class="flex">
       
-       <a href="Main.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn">logout</a>
+       <a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn">logout</a>
    </div>
 
 </div>

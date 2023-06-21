@@ -10,7 +10,7 @@ session_start();
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loginstyle.css" />
     <title>Sign in & Sign up Form</title>
      <!-- PHP CONNECTION FILE -->
 	 <?php include 'Dbconnect.php' ?>
@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
     $cpassword = mysqli_real_escape_string($conn, $_POST['ncpassword']);
    
 
-    $emailquery = "select * from signupdb where email = '$email'"; 
+    $emailquery = "select * from signupdb where Email = '$email'"; 
     $emailquery_run = mysqli_query($conn, $emailquery);
     $emailquery_num = mysqli_num_rows($emailquery_run);
     if($emailquery_num > 0)
@@ -41,14 +41,14 @@ if(isset($_POST['submit']))
 	{
 		if($password === $cpassword)
 		{
-			$insertquery = "insert into signupdb (UName,	Email,	Phone,	Password,	CPassword) values ('$name', '$email', '$password', '$cpassword', '$mobile')";
+			$insertquery = "insert into signupdb (UName,	Email,	Phone,	Password,	CPassword) values ('$name', '$email', '$mobile', '$password', '$cpassword')";
 			$iquery = mysqli_query($conn, $insertquery);
 			if($iquery)
             {
 				?>
 				<script>
 					alert("Account Created Successfully");
-					window.location.href = "index.php";
+					window.location.href = "success.php";
 				</script>
 				<?php
             }
@@ -79,7 +79,7 @@ if(isset($_POST['login']))
   $email = $_POST['nemail'];
 	$password = $_POST['npassword'];
 
-	$loginquery = "select * from signupdb where email = '$email'";
+	$loginquery = "select * from signupdb where Email = '$email'";
 	$query = mysqli_query($conn, $loginquery);
 	
 	$count = mysqli_num_rows($query);
@@ -87,8 +87,9 @@ if(isset($_POST['login']))
 	if($count)
 	{
 		$pass = mysqli_fetch_assoc($query);
+    $_SESSION['user_id'] = $pass['id'];
 
-		if($password === $pass["password"])
+		if($password === $pass["Password"])
 		{
 			?>
 		    <script>
@@ -130,7 +131,9 @@ if(isset($_POST['login']))
               <i class="fas fa-lock"></i>
               <input type="password" name= "npassword" placeholder="Password" />
             </div>
+            <div class="pass-txt"><a href="forgot.php">Change/Forgot password?</a></div>
             <input type="submit" value="Login"  name="login" class="btn solid" />
+           
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -170,21 +173,7 @@ if(isset($_POST['login']))
               <input type="password" name= "ncpassword" placeholder="Confirm Password" />
             </div>
             <input type="submit" class="btn" name="submit" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+            
           </form>
         </div>
       </div>

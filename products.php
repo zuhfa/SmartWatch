@@ -1,11 +1,6 @@
 <?php
-
-@include 'DBconnect.php';
-
-
-
+@include 'Dbconnect.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +11,7 @@
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="styleproduct1.css">
+  
    <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
@@ -536,21 +529,6 @@ section{
    background-color: #bb817a;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
 @media (max-width:1200px){
@@ -689,7 +667,26 @@ if(isset($message)){
 </div>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="js/script.js">
+   let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .navbar');
+
+menu.onclick = () =>{
+   menu.classList.toggle('fa-times');
+   navbar.classList.toggle('active');
+};
+
+window.onscroll = () =>{
+   menu.classList.remove('fa-times');
+   navbar.classList.remove('active');
+};
+
+
+document.querySelector('#close-edit').onclick = () =>{
+   document.querySelector('.edit-form-container').style.display = 'none';
+   window.location.href = 'adminproduct.php';
+};
+</script>
 
 </body>
 </html>

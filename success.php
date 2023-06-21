@@ -43,7 +43,7 @@
     <h1>Sign Up Successful</h1>
     <p>Congratulations! You have successfully signed up.</p>
     <p>Thank you for joining our community.</p>
-    <a class="back-link" href="index.php">Go back to homepage</a>
+    <a class="back-link" href="Login.php">Go back to homepage</a>
   </div>
 </body>
 </html>

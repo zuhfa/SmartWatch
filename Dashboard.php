@@ -3,8 +3,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Responsiive Admin Dashboard | CodingLab </title>
-    <link rel="stylesheet" href="StyleAdmin1.css">
+    <title>Admin Dashboard</title>
+    
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #F1948A;
+  background: #659ec7;
   transition: all 0.5s ease;
 }
 .sidebar.active{
@@ -61,10 +61,10 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li a.active{
-  background: #d3675b;
+  background: #488ac7;
 }
 .sidebar .nav-links li a:hover{
-  background: #d3675b;
+  background: #488ac7;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -310,7 +310,7 @@ nav .profile-details i{
 }
 .sales-boxes .box .button a{
   color: #fff;
-  background: #d3675b;
+  background: #488ac7;
   padding: 4px 12px;
   font-size: 15px;
   font-weight: 400;
@@ -454,7 +454,7 @@ nav .profile-details i{
   <div class="sidebar">
     <div class="logo-details">
       <i class=''><img src="images\Logo-removebg-preview.png" width="50px" height="70px"></i>&nbsp;
-      <span class="logo_name">Wrapped Hearts</span>
+      <span class="logo_name">Digital Outlooks</span>
     </div>
       <ul class="nav-links">
         <li>
@@ -501,7 +501,7 @@ nav .profile-details i{
         </li>
         
         <li class="log_out">
-          <a href="Main.php">
+          <a href="index.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -520,7 +520,7 @@ nav .profile-details i{
       </div>
       <div class="profile-details">
        
-        <span class="admin_name">Syeda Arshiya</span>
+        <span class="admin_name">Zohra Fathima</span>
         <i class='bx bx-chevron-down' ></i>
       </div>
     </nav>
@@ -624,33 +624,33 @@ nav .profile-details i{
             <li>
             <a href="#">
             
-              <span class="product">Vuitton Sunglasses</span>
+              <span class="product">Galaxy Gear</span>
             </a>
             <span class="price">$1107</span>
           </li>
           <li>
             <a href="#">
-                            <span class="product">Hourglass Jeans </span>
+                            <span class="product">iwatch</span>
             </a>
             <span class="price">$1567</span>
           </li>
           <li>
             <a href="#">
-                         <span class="product">Nike Sport Shoe</span>
+                         <span class="product">Pebble Smartwatch</span>
             </a>
             <span class="price">$1234</span>
           </li>
           <li>
             <a href="#">
               
-              <span class="product">Hermes Silk Scarves.</span>
+              <span class="product">Samsung ACTIVE 3</span>
             </a>
             <span class="price">$2312</span>
           </li>
           
 <li>
             <a href="#">
-              <span class="product">Bilack Wear's Shirt</span>
+              <span class="product">Noisefit</span>
             </a>
             <span class="price">$1245</span>
           </li>
